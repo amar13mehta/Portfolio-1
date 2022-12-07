@@ -1,0 +1,12 @@
+$mainColor: #88BDBC;
+
+$width :910px;
+
+@mixin mobile {
+    @media (max-width: #{$width}){
+        @content
+        
+    }
+        
+    }
+    

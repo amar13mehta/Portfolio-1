@@ -1,0 +1,128 @@
+@import "../../global.scss";
+
+.intro{
+    background-color: #DEF2F1 ;
+    display: flex;
+
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    
+    .left{
+            flex: 0.5;
+            overflow: hidden;
+
+            .imgContainer{
+                margin-top: 40px;
+                width: 600px;
+                height: 600px;
+                overflow: hidden;
+                
+                border-radius: 70%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                float: right;
+                @include mobile{
+                    align-items: flex-start;
+                }
+
+                img{
+                    height: 114%;
+                    @include mobile{
+                        height: 50%;
+                        margin-top: 30px;
+                    }
+                    
+                }
+            }
+    }
+
+
+
+    .right{
+            
+            flex: 0.5;
+            position: relative;
+
+            .wrapper{
+                 width: 100%;
+                 height: 100%;
+                 padding-left: 50px;
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: center;
+
+                 @include mobile{
+                    padding-left: 0;
+                    align-items: center;
+                     }
+                 
+
+                 h1{
+                         font-size: 60px;
+                         margin: 5px 0;
+
+                         @include mobile{
+                            font-size: 40px;
+                        }
+
+                   }
+                 h2{
+                    font-size: 35px;
+
+                    @include mobile{
+                        font-size: 25px;
+                       }
+                   }
+                 h3{
+                    font-size: 32px;
+
+                    @include mobile{
+                        font-size: 22px;
+                    }
+                    
+                    span{ 
+                        font-size: inherit;
+                        color: #3AAFA9;
+                    }
+                    
+                    .ityped-cursor{
+                        animation: blink 0.5s infinite;
+                    }
+
+                    @keyframes blink {
+                        50%{
+                            opacity: 1;
+                        }
+                        100%{
+                            opacity: 0;
+                        }
+                        
+                    }
+
+                   }
+            }
+
+            a{
+                position: absolute;
+                bottom: 10px; 
+                left: 40%;
+                
+                 img{
+                     width: 30px;
+                     animation: arrowBlink 1s infinite;
+                 }
+                 @keyframes arrowBlink {
+                     to{
+                         opacity: 0;
+                     }
+                 }
+                 
+
+            }
+            
+    }
+}
